@@ -1,0 +1,18 @@
+/* OauthLogin.module.css */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #cfd8dc 0%, #607d8b 100%, #b0bec5 100%);
+    text-align: center;
+  }
+  
+  .message {
+    font-size: 24px;
+    color: #333;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+  }

@@ -1,0 +1,15 @@
+/*---------------------
+  내가 찜한 상품
+-----------------------*/
+
+.heart-manage {
+    padding-top: 70px;
+    padding-bottom: 90px;
+	padding-left: 150px;
+}
+
+.no-results {
+	text-align: center;
+	vertical-align: middle;
+	height: 100px;
+}
