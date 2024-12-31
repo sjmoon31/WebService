@@ -3,8 +3,8 @@ import axios from 'axios';
 import { useLocation, useNavigate } from 'react-router-dom';
 import styles from './OauthLogin.module.css';
 
-const googleClientId = 'GOOGLE_CLIENT_ID'; // Google Cloud Console에서 발급받은 클라이언트 ID
-const googleClientSecret = 'GOOGLE_CLIENT_SECRET'; // Google Cloud Console에서 발급받은 클라이언트 시크릿s
+const googleClientId = 'GOOGLE_CLIENT_ID';
+const googleClientSecret = 'GOOGLE_CLIENT_SECRET';
 const googleRedirectUrl = 'http://localhost:3000/auth/google/callback'; // Google로부터 Redirect 당할 URL
 
 const OauthLogin = () => {

@@ -17,11 +17,17 @@ const CartList = () => {
             'Authorization': `Bearer ${token}`
           }
         });
-        // Ensure the response data is an array
         setCartList(response.data.myCartList);
         setTotalPrice(response.data.totalPrice);
-      } catch (error) {
-        console.error('Error fetching cart list:', error);
+      } catch (err) {
+        if(err.response && err.response.status === 401) {
+          alert('로그인이 필요합니다.');
+          localStorage.removeItem('userName');
+          localStorage.removeItem('jwtToken');
+          navigate('/login');
+        } else {
+          console.error('Error fetching cart list:', err);
+        }
         setCartList([]); // Set to an empty array on error
       }
     };

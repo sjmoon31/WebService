@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Login from './pages/Login';
+import Join from './pages/Join';
 import OauthLogin from './pages/OauthLogin.js';
 import Main from './pages/Main';
 import ProductInfo from './pages/product/ProductInfo';
@@ -18,6 +19,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Navigate to="/main" />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/join" element={<Join />} />
         <Route path="/main" element={<Main />} />
         <Route path="/productInfo/:productSeq" element={<ProductInfo />} />
         <Route path="/productList" element={<ProductList />} />

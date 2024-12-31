@@ -39,6 +39,8 @@ const MyOrderList = () => {
         setLoading(false);
         if(err.response && err.response.status === 401) {
           alert('로그인이 필요합니다.');
+          localStorage.removeItem('userName');
+          localStorage.removeItem('jwtToken');
           navigate('/login');
         } else {  
           setError('주문 내역을 불러오는 중 오류가 발생했습니다.');

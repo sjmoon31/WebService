@@ -1,0 +1,229 @@
+/* join.module.css */
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #cfd8dc 0%, #607d8b 100%, #b0bec5 100%);
+}
+
+.loginBox {
+  width: 600px; /* Increase the width */
+  padding: 40px;
+  position: relative;
+  background: #fff;
+  text-align: center;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+.userBox {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.userBox input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #333;
+  outline: none;
+  background: transparent;
+}
+
+.userBox label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #333;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.userBox button {
+  display: block; /* Ensure the button is displayed as a block element */
+  width: 100%; /* Make the button take the full width of the container */
+  margin-top: 10px; /* Add margin-top to create space between input and button */
+}
+
+.userBox input:focus ~ label,
+.userBox input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #03a9f4;
+  font-size: 12px;
+}
+
+.emailBox {
+  position: relative;
+  height: 60px;
+}
+
+.emailBox input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #333;
+  outline: none;
+  background: transparent;
+}
+
+.emailBox label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #333;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.emailBox input:focus ~ label,
+.emailBox input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #03a9f4;
+  font-size: 12px;
+}
+
+.emailCheckButton {
+  width: auto;
+  padding: 5px 10px;
+  font-size: 14px;
+  margin-top: 10px;
+  background-color: #03a9f4; /* 기본 색상 */
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.emailVerificationButton {
+  background-color: #4caf50; /* 인증번호 보내기 버튼 색상 */
+}
+
+.phoneNumberContainer {
+  display: flex;
+  gap: 10px;
+  flex-direction: row; /* 입력칸을 가로로 배치 */
+  align-items: center;
+}
+
+.phoneNumberContainer input {
+  flex: 1;
+  font-size: 16px;
+  width: 75px;
+  color: #333;
+  margin-bottom: 20px;
+  border: none;
+  border-bottom: 1px solid #333;
+  outline: none;
+  background: transparent;
+  text-align: center;
+}
+
+.phoneNumberContainer label {
+  font-size: 14px;
+  color: #333;
+  margin-right: 10px;
+}
+
+.addressContainer {
+  display: flex;
+  margin-top: 20px;
+  gap: 10px;
+  flex-direction: row; /* 입력칸을 가로로 배치 */
+  align-items: center;
+}
+
+.addressContainer input {
+  flex: 1;
+  font-size: 16px;
+  width: 75px;
+  color: #333;
+  margin-bottom: 10px;
+  border: none;
+  border-bottom: 1px solid #333;
+  outline: none;
+  background: transparent;
+  text-align: center;
+}
+
+.addressContainer label {
+  font-size: 14px;
+  color: #333;
+  margin-right: 10px;
+}
+
+.addressSearchButton {
+  width: auto;
+  padding: 5px 10px;
+  font-size: 14px;
+  margin-top: 10px;
+  background-color: #03a9f4; /* 기본 색상 */
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.verificationButton {
+  margin-top: 20px;
+}
+
+.joinBtn {
+  background: #607d8b;
+  border: none;
+  padding: 10px 20px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: 0.5s;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.joinBtn:hover {
+  background: #0288d1;
+}
+
+button {
+  margin-top: 10px;
+  background: #808080;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #696969;
+}
+
+.linkButton {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px;
+  background-color: #808080;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.linkButton:hover {
+  background-color: #696969;
+}

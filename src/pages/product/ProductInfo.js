@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import axios from 'axios';
 import Header from '../../components/Header';
@@ -14,6 +15,7 @@ const ProductInfo = () => {
   const [selectedSize, setSelectedSize] = useState(null);
   const [activeIndex, setActiveIndex] = useState(0); // 현재 선택된 이미지 인덱스
   const [activeTab, setActiveTab] = useState('description');
+  const navigate = useNavigate();
 
   useEffect(() => {
     // Fetch product data from API
@@ -29,7 +31,14 @@ const ProductInfo = () => {
         setProduct(response.data.product);
         setReviewInfo(response.data.reviewInfo);
       } catch (error) {
-        console.error('Error fetching product data:', error);
+        if (error.response && error.response.status === 401) {
+          alert('로그인이 필요합니다.');
+          localStorage.removeItem('userName');
+          localStorage.removeItem('jwtToken');
+          navigate('/login');
+        } else {
+          console.error('Error fetching product data:', error);
+        }
       }
     };
 

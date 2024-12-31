@@ -14,10 +14,9 @@ useEffect(() => {
   }, []);
 
   const handleLogout = () => {
-    // Clear user session data
+    // 로그아웃 처리
     localStorage.removeItem('userName');
     localStorage.removeItem('jwtToken');
-    // Redirect to main page
     window.location.href = '/main';
   };
 
@@ -60,12 +59,17 @@ useEffect(() => {
           <div className="col-lg-3">
             <div className="header__right">
               <div className="header__right__auth">
-                {userName ? (
+              {userName ? (
+                <>
                   <Link to="/myPage">{userName}</Link>
-                ) : (
+                  <a href="#" onClick={handleLogout}>로그아웃</a>
+                </>
+              ) : (
+                <>
                   <Link to="/login">로그인</Link>
-                )}
-                <a href="#" onClick={handleLogout}>로그아웃</a>
+                  <Link to="/join">회원가입</Link>
+                </>
+              )}
               </div>
               <ul className="header__right__widget">
                 <li><span className="icon_search search-switch" onClick={handleSearchClick}></span></li>

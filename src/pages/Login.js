@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
-import styles from './Login.module.css';
+import { useNavigate, Link } from 'react-router-dom';
+import styles from './login.module.css';
 
 function Login() {  
   const [email, setEmail] = useState('');
@@ -44,7 +44,7 @@ function Login() {
   return (
     <div className={styles.container}>
       <div className={styles.loginBox}>
-        <h2>Login</h2>
+        <h2>로그인</h2>
         <form onSubmit={handleSubmit}>
           <div className={styles.userBox}>
             <input type="email" name="email" required value={email} onChange={(e) => setEmail(e.target.value)} />
@@ -57,6 +57,10 @@ function Login() {
           <button className={styles.loginBtn} type="submit">Login</button>
         </form>
         <button className={styles.loginBtn} onClick={loginHandler}>Login with Google</button>
+        <div className={styles.buttonContainer}>
+          <Link to="/main" className={styles.linkButton}>메인페이지</Link>
+          <Link to="/join" className={styles.linkButton}>회원가입</Link>
+        </div>
       </div>
     </div>
   );

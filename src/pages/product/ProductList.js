@@ -62,6 +62,8 @@ const ProductList = () => {
         } catch (error) {
             if (error.response && error.response.status === 401) {
                 alert('로그인이 필요합니다.');
+                localStorage.removeItem('userName');
+                localStorage.removeItem('jwtToken');
                 navigate('/login');
             } else {
                 console.error('Error fetching product data:', error);
